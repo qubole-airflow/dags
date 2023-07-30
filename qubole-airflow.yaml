@@ -1,0 +1,7 @@
+steps:
+  requirements: requirements.txt
+  scripts:
+    - 'ls'
+    - 'python setup.py'
+  sync-directory:
+    dags: dags
