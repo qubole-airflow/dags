@@ -21,7 +21,7 @@ t1 = QuboleOperator(
     query="SHOW tables;",
     cluster_label='hadoop',
     fetch_logs=True,
-    qubole_conn_id="my_conn",
+    qubole_conn_id="qubole_default",
     dag=dag)
 
 t1
