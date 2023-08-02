@@ -2,8 +2,6 @@ from airflow import DAG
 from airflow.contrib.operators.qubole_operator import QuboleOperator
 from datetime import datetime, timedelta
 
-qubole_conn_id = "my_conn"
-
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -23,7 +21,7 @@ t1 = QuboleOperator(
     query="SHOW tables;",
     cluster_label='hadoop',
     fetch_logs=True,
-    conn_id=qubole_conn_id,
+    qubole_conn_id="my_conn",
     dag=dag)
 
 t1
